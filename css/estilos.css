@@ -1,0 +1,839 @@
+/* =========================================================
+   RESET / BASE
+========================================================= */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+header {
+    background: #0E0E0F;
+}
+
+.contenedor-header {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 40px;
+    display: flex;
+    gap: 24px;
+}
+
+.logo-sitio {
+    height: 60px;
+    max-width: 200px;
+    cursor: pointer;
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+}
+
+.boton-enlace {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #6C6CE7;
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    background: transparent;
+    padding: 10px 30px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.boton-enlace:hover {
+    background: #6C6CE720;
+    border-color: #8A8AFC;
+}
+
+.contenedor-busqueda {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 260px;
+}
+
+.campo-busqueda {
+    width: 100%;
+    max-width: 700px;
+    padding: 16px 20px;
+    border-radius: 30px;
+    border: 0;
+    font-size: 16px;
+    outline: 0;
+}
+
+.boton-buscar {
+    position: absolute;
+    right: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #6C6CE7;
+    border: 0;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 26px;
+    box-shadow: -3px 2px 5px #00000059;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton-buscar:hover {
+    background: #5b53ff;
+}
+
+.header-acciones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.boton-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 0;
+    background: transparent;
+    border: 0;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+.icono {
+    width: 44px;
+    height: 44px;
+    display: block;
+    object-fit: contain;
+}
+
+.boton-login {
+    display: inline-flex;
+}
+
+/* le pedi al chat que me ayude a ocultar el icono de login en formato desktop */
+.boton-icono-iniciar{
+  display: none;
+}
+
+/* =========================================================
+   PÁGINA INICIO
+========================================================= */
+/* CAROUSEL INICIO */
+.carousel-item {
+    height: 600px;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* TÍTULO INICIO */
+.titulo-principal {
+    background:#0E0E0F;
+    color:#6C6CE7;
+    font-family:'Montserrat',sans-serif;
+    font-weight:700;
+    font-size:30px;
+    text-align:center;
+    padding:10px 0;
+    margin:0;
+}
+
+.nav-productos .contenedor-tarjetas{
+    background: rgb(177, 176, 176);
+}
+
+/* =========================================================
+   PÁGINA NUESTRA HISTORIA
+========================================================= */
+.seccion-historia {
+    background: #0E0E0F;
+    padding-bottom: 40px;
+}
+
+.encabezado-historia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 55px;
+}
+
+.titulo-historia {
+    color: rgb(177, 176, 176);
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.logo-historia {
+    width: 250px;
+}
+
+.seccion-historia h2 {
+    color: #6C6CE7;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 30px 0;
+    margin: 0;
+}
+
+.seccion-historia p {
+    color: rgb(177, 176, 176);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 0 200px 20px;
+    margin: 0;
+}
+
+.seccion-historia .card.historia-card{
+    background: #1f232a !important;
+    border: 0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 15px #00000059 !important;
+}
+
+.seccion-historia .card.historia-card .card-body{
+    background: transparent !important;
+}
+
+.seccion-historia .card.historia-card .card-title.historia-card-titulo{
+    text-align: center;
+    color: #6C6CE7 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.seccion-historia .card.historia-card .card-text.historia-card-texto{
+    color: rgb(177, 176, 176) !important;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.seccion-historia .historia-cierre{
+    color: #6C6CE7 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 22px 0 40px;
+}
+
+/* =========================================================
+   PÁGINA TIENDA
+========================================================= */
+.seccion-tienda {
+    background: rgb(177, 176, 176);
+}
+
+.encabezado-tienda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+    background: #0E0E0F;
+}
+
+.encabezado-tienda-nuevos-l {
+    margin-top: 0;
+    padding-top: 8px;
+}
+
+.titulo-tienda {
+    color: rgb(177, 176, 176);
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.encabezado-tienda,
+.titulo-seccion-tienda {
+    background: #0E0E0F;
+    color: #6C6CE7;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.bloque-tienda {
+    background: #0E0E0F;
+    padding-bottom: 10px;
+}
+
+/* CAROUSEL TIENDA */
+.carousel-tienda-wrapper {
+    max-width: 1790px;
+    margin: 15px auto;
+    padding: 0 20px;
+}
+
+.carousel-tienda {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-tienda .carousel-item {
+    height: 300px;
+}
+
+.carousel-tienda .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* TARJETAS TIENDA */
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 280px));
+    justify-content: center;
+    gap: 50px 90px;
+    padding: 30px 20px 40px;
+    background: rgb(177, 176, 176);
+}
+
+.seccion-tienda .contenedor-tarjetas {
+    background: rgb(177, 176, 176);
+}
+
+.tarjeta-producto1,
+.tarjeta-producto2,
+.tarjeta-producto3 {
+    width: 280px;
+    height: 400px;
+    background-size: 110% auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: visible;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px #00000059;
+}
+
+.tarjeta-producto1 {
+    background-image: url("../imagenes/fondo tarjeta.png");
+}
+
+.tarjeta-producto2 {
+    background-image: url("../imagenes/fondo tarjeta2.png");
+}
+
+.tarjeta-producto3 {
+    background-image: url("../imagenes/fondo tarjeta3.png");
+}
+
+.tarjeta-encabezado {
+    padding: 12px 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 20;
+}
+
+.precio-tarjeta {
+    background: #0b0b0b;
+    color: #6C6CE7;
+    padding: 3px 14px;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.logo-tarjeta {
+    margin-left: auto;
+}
+
+.logo-tarjeta img {
+    height: 40px;
+    object-fit: contain;
+    display: block;
+}
+
+.tarjeta-cuerpo {
+    position: relative;
+    height: 180px;
+}
+
+.producto {
+    position: absolute;
+    width: 350px;
+    left: 47%;
+    top: 52%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.6));
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: translate(-50%, -50%) rotate(-5deg) scale(1.08);
+}
+
+.tarjeta-pie {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 105px;
+    padding-bottom: 20px;
+    z-index: 20;
+}
+
+.pie-interno {
+    width: 85%;
+    max-width: 220px;
+    text-align: center;
+}
+
+.btn-anadir {
+    display: block;
+    width: 100%;
+    padding: 7px 0;
+    background: #4f46e5 !important;
+    color: #fff !important;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.35);
+    transition: 0.2s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-anadir:hover {
+    background: #5b53ff !important;
+    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.45);
+}
+
+.btn-anadir:focus,
+.btn-anadir:focus-visible {
+    background: #5b53ff !important;
+    color: #fff !important;
+    outline: 0;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.25) !important;
+}
+
+.btn-anadir:active {
+    background: #4f46e5 !important;
+    transform: translateY(0);
+}
+
+.link-tarjeta{
+    display: contents;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================================
+   PÁGINA PRODUCTO
+========================================================= */
+.pagina-producto {
+    background: rgb(177, 176, 176);
+}
+
+.producto-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+.producto-info {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.35);
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 50px;
+    justify-content: center;
+    height: 380px;
+}
+
+.titulo-producto {
+    margin-top: 0;
+}
+
+.precio-producto {
+    display: inline-block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    color: #4f46e5;
+    padding: 6px 12px;
+    border-radius: 10px;
+    background: rgba(79, 70, 229, 0.12);
+    border: 1px solid rgba(79, 70, 229, 0.4);
+}
+
+.producto-info p {
+    margin-bottom: 30px;
+}
+
+.pagina-producto .talle-btn{
+    border-color: rgba(79, 70, 229, 0.55) !important;
+    color: #4f46e5 !important;
+    background: transparent !important;
+}
+
+.pagina-producto .talle-btn:hover,
+.pagina-producto .talle-btn:focus,
+.pagina-producto .talle-btn:active,
+.pagina-producto .talle-btn.active{
+    background: rgba(79, 70, 229, 0.12) !important;
+    border-color: rgba(79, 70, 229, 0.75) !important;
+    color: #4f46e5 !important;
+}
+
+.imagenes-miniatura {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.imagenes-miniatura img {
+    width: 150px;
+    height: auto;
+    box-shadow: 5px 5px 25px 0 rgb(128, 128, 128);
+    transition: transform 0.2s ease;
+}
+
+.imagenes-miniatura img:hover {
+    transform: scale(1.10);
+}
+
+.titulo-seccion-producto{
+    background: #0E0E0F;
+    color: #6C6CE7;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.pagina-producto .bloque-tienda {
+    background: #0E0E0F;
+    padding-bottom: 10px;
+}
+
+.pagina-producto .contenedor-tarjetas {
+    background: transparent;
+}
+
+.pagina-producto .link-tarjeta{
+    display: block;
+}
+
+/* aca me ayudo el chat, le pedi que me eexplique como podia hacer para integrar las tarjetas y que no choquen con boostrap y me explico porque chocaban y como hacer para que queden bien  */
+.pagina-producto .producto-relacionado-card.tarjeta-producto1,
+.pagina-producto .producto-relacionado-card.tarjeta-producto2,
+.pagina-producto .producto-relacionado-card.tarjeta-producto3{
+    width: 100%;
+    max-width: 280px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.pagina-producto .bloque-tienda .producto-relacionado-card{
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.pagina-producto .bloque-tienda .tarjeta-producto1{ background-image: url("../imagenes/fondo tarjeta.png") !important; }
+.pagina-producto .bloque-tienda .tarjeta-producto2{ background-image: url("../imagenes/fondo tarjeta2.png") !important; }
+.pagina-producto .bloque-tienda .tarjeta-producto3{ background-image: url("../imagenes/fondo tarjeta3.png") !important; }
+
+.pagina-producto .bloque-tienda .tarjeta-producto1,
+.pagina-producto .bloque-tienda .tarjeta-producto2,
+.pagina-producto .bloque-tienda .tarjeta-producto3{
+    background-repeat: no-repeat !important;
+    background-position: top !important;
+    background-size: 110% auto !important;
+}
+
+h2,
+h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* =========================================================
+   PÁGINA CONTACTANOS
+========================================================= */
+main.py-5 {
+    padding-top: 15px !important;
+    background: #909090;
+}
+
+#contactanos {
+    font-size: 32px;
+    padding: 3px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.col-12.col-md-8.col-lg-6 {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgb(101, 101, 101);
+}
+
+.btn-enviar {
+    background: #4f46e5;
+    border: 1px solid #4f46e5;
+    color: #fff;
+}
+
+.btn-enviar:hover {
+    background: #5b53ff;
+    border-color: #5b53ff;
+    color: #fff;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+    background: #0E0E0F;
+    padding: 5px 0;
+}
+
+.contenedor-footer {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociales img {
+    height: 45px;
+}
+
+/* =========================================================
+   RESPONSIVE CELULAR (HEADER)
+========================================================= */
+@media (max-width: 600px) {
+    .contenedor-header {
+        flex-wrap: wrap;
+        padding: 10px 14px;
+        gap: 0px 18px;
+    }
+    /* pedi ayuda al chat para que me explique como podia bajar la barra de buscar en cel */
+    .contenedor-busqueda {
+        order: 4;
+        margin-top: 8px;
+    }
+
+    /* Mobile: mostrar icono con ayuda de chat gpt*/
+    .header-acciones .boton-icono-iniciar{
+        display: inline-flex;
+    }
+
+    .boton-login {
+        display: none;
+    }
+
+    .icono {
+        width: 50px;
+        height: 45px;
+    }
+
+    .boton-icono {
+        padding: 0;
+        margin: 0;
+    }
+
+    .boton-buscar {
+        right: 5px;
+    }
+
+    /* CAROUSEL INDEX */
+    .carousel-item{
+        height: 240px;
+    }
+
+    /* index responsive */
+    .contenedor-tarjetas{ 
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+        gap: 14px;
+        padding: 16px 12px 24px; 
+    } 
+    .tarjeta-producto1, 
+    .tarjeta-producto2, 
+    .tarjeta-producto3{ 
+        width: 100%; 
+        height: auto; 
+    } 
+    .producto{ 
+        width: clamp(170px, 44vw, 240px); 
+        left: 50%; 
+        top: 35%; 
+        transform: translate(-50%, -50%) rotate(-5deg); 
+    } 
+    
+    .tarjeta-pie{ 
+        margin-top: 0;
+        padding: 12px 12px 14px;
+        align-self: end; 
+    } 
+    
+    .btn-anadir{ 
+        font-size: 14px; 
+        padding: 10px 0; 
+        border-radius: 10px; 
+    }
+
+    /* Nuestra historia responsive */
+    .encabezado-historia{
+        flex-direction: column;
+        gap: 12px;
+        padding-top: 30px;
+    }
+
+    .titulo-historia{
+        font-size: 54px;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .logo-historia{
+        width: 170px;
+        max-width: 70%;
+        height: auto;
+    }
+
+    .seccion-historia p{
+        padding: 0 16px 18px;
+    }
+
+    /* Producto responsive */
+    .producto-layout{
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 0 14px;
+    }
+
+    .producto-info{
+        margin-top: 0;
+        height: auto;
+    }
+
+    .producto-imagen img{
+        max-width: 320px;
+    }
+
+    .imagenes-miniatura{
+        justify-content: center;
+        padding: 0 10px;
+        margin: 10px 0 0;
+    }
+
+    .imagenes-miniatura img{
+        width: min(110px, 28vw);
+    }
+
+    .pagina-producto .bloque-tienda .row.g-4 > [class*="col-"]{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* me ayudo chat gpt con las tarjetas de la pagina producto porque chocaban con boostrap, me ayudo a solucionarlo porque le pedi que me explique que estaba pasadndo */
+    .pagina-producto .producto-relacionado-card.tarjeta-producto1,
+    .pagina-producto .producto-relacionado-card.tarjeta-producto2,
+    .pagina-producto .producto-relacionado-card.tarjeta-producto3{
+        max-width: 100%;
+        height: 400px;
+    }
+
+    /* footer cel */
+    .contenedor-footer{
+        align-items: center;
+    }
+
+    .contenedor-footer .boton-enlace{
+        max-width: 320px;
+        justify-content: center;
+        padding: 8px 16px;
+        font-size: 16px;
+        margin: 0px 10px 0px 10px;
+    }
+
+    .contenedor-footer .logo-sitio{
+        height: 48px;
+        max-width: 160px;
+    }
+
+    /* encabezado de tienda para dejar todo respinsive */
+    .titulo-tienda{
+        font-size: 54px;
+        line-height: 1;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* formulario de boostrap mas chico en cel */
+    .col-12.col-md-8.col-lg-6{
+        max-width: 93%;
+    }
+}
