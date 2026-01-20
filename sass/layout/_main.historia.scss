@@ -1,0 +1,86 @@
+/* =========================================================
+   PÁGINA NUESTRA HISTORIA
+========================================================= */
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.seccion-historia {
+  background: $negro-principal;
+  padding-bottom: 40px;
+}
+
+.encabezado-historia {
+  @include flex-center;
+  gap: 20px;
+  padding-top: 55px;
+}
+
+.titulo-historia {
+  color: $color-texto-claro;
+  text-align: center;
+  font-family: $font-titulo;
+  font-size: 80px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.logo-historia {
+  width: 250px;
+}
+
+.seccion-historia h2 {
+  color: $violeta-primario;
+  text-align: center;
+  font-family: $font-titulo;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 30px 0;
+  margin: 0;
+}
+
+.seccion-historia p {
+  color: $color-texto-claro;
+  text-align: center;
+  font-family: $font-texto;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.seccion-historia .card.historia-card {
+  background: #1f232a !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35) !important;
+}
+
+.seccion-historia .card.historia-card .card-body {
+  background: transparent !important;
+}
+
+.seccion-historia .card.historia-card .card-title.historia-card-titulo {
+  text-align: center;
+  color: $violeta-primario !important;
+  font-family: $font-titulo;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.seccion-historia .card.historia-card .card-text.historia-card-texto {
+  color: $color-texto-claro !important;
+  text-align: center;
+  font-family: $font-texto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.seccion-historia .historia-cierre {
+  color: $violeta-primario !important;
+  font-family: $font-titulo;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 22px 0 40px;
+}

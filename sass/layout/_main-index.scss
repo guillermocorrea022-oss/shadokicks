@@ -1,0 +1,33 @@
+/* =========================================================
+   PÁGINA INICIO
+========================================================= */
+@use "../utilities/variables" as *;
+
+
+/* CAROUSEL INICIO */
+.carousel-item {
+  height: 600px;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* TÍTULO INICIO */
+.titulo-principal {
+  background: $negro-principal;
+  color: $violeta-primario;
+  font-family: $font-titulo;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.nav-productos .contenedor-tarjetas {
+  background: $gris-claro;
+}

@@ -1,0 +1,20 @@
+/* =========================================================
+   FOOTER
+========================================================= */
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+footer {
+  background: $negro-principal;
+  padding: 5px 0;
+}
+
+.contenedor-footer {
+  max-width: $max-width-layout;
+  margin: 0 auto;
+  @include flex-between-center;
+}
+
+.redes-sociales img {
+  height: $icono-altura-md;
+}

@@ -1,0 +1,116 @@
+/* =========================================================
+   HEADER
+========================================================= */
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "sass:color"; /* Sass me estaba dando un error y pedi ayuda al chat, me dijo que era un error que iba a pasar en sas 3.0 y me dio esta solucion  */
+
+
+header {
+  background: $negro-principal;
+}
+
+.contenedor-header {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 40px;
+  display: flex;
+  gap: 24px;
+}
+
+.logo-sitio {
+  height: 60px;
+  max-width: 200px;
+  cursor: pointer;
+}
+
+.menu-principal {
+  @include flex-center();
+}
+
+.boton-enlace {
+  @include flex-center();
+  border: 2px solid $violeta-primario;
+  color: $blanco;
+  border-radius: $radio-lg;
+  text-decoration: none;
+  background: transparent;
+  padding: 10px 30px;
+  transition: $transition-fast;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.boton-enlace:hover {
+  background: $violeta-bg-soft;
+  border-color: color.adjust($violeta-primario, $lightness: 10%);
+}
+
+.contenedor-busqueda {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 260px;
+}
+
+.campo-busqueda {
+  width: 100%;
+  max-width: 700px;
+  padding: 16px 20px;
+  border-radius: 30px;
+  border: 0;
+  font-size: 16px;
+  outline: 0;
+  font-family: $font-texto;
+}
+
+.boton-buscar {
+  position: absolute;
+  right: 55px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: $violeta-primario;
+  border: 0;
+  color: $blanco;
+  border-radius: 20px;
+  padding: 10px 26px;
+  box-shadow: -3px 2px 5px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  font-size: 16px;
+  transition: $transition-fast;
+}
+
+.boton-buscar:hover {
+  background: $violeta-hover;
+}
+
+.header-acciones {
+  @include flex-center(12px);
+}
+
+.boton-icono {
+  @include flex-center();
+  text-decoration: none;
+  line-height: 0;
+  background: transparent;
+  border: 0;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.icono {
+  width: 44px;
+  height: 44px;
+  display: block;
+  object-fit: contain;
+}
+
+.boton-login {
+  display: inline-flex;
+}
+
+/* le pedi al chat que me ayude a ocultar el icono de login en formato desktop */
+.boton-icono-iniciar {
+  display: none;
+}

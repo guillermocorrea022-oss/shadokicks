@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* colores */
+/* sombras */
+/* fuentes */
 * {
   box-sizing: border-box;
 }
@@ -24,6 +27,7 @@ main {
 /* =========================================================
    HEADER
 ========================================================= */
+/* Sass me estaba dando un error y pedi ayuda al chat, me dijo que era un error que iba a pasar en sas 3.0 y me dio esta solucion  */
 header {
   background: #0E0E0F;
 }
@@ -45,12 +49,15 @@ header {
 .menu-principal {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 0;
 }
 
 .boton-enlace {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0;
   border: 2px solid #6C6CE7;
   color: #fff;
   border-radius: 12px;
@@ -63,8 +70,8 @@ header {
 }
 
 .boton-enlace:hover {
-  background: rgba(108, 108, 231, 0.1254901961);
-  border-color: #8A8AFC;
+  background: rgba(79, 70, 229, 0.12);
+  border-color: rgb(151.8421052632, 151.8421052632, 238.1578947368);
 }
 
 .contenedor-busqueda {
@@ -83,6 +90,7 @@ header {
   border: 0;
   font-size: 16px;
   outline: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .boton-buscar {
@@ -95,9 +103,10 @@ header {
   color: #fff;
   border-radius: 20px;
   padding: 10px 26px;
-  box-shadow: -3px 2px 5px rgba(0, 0, 0, 0.3490196078);
+  box-shadow: -3px 2px 5px rgba(0, 0, 0, 0.35);
   cursor: pointer;
   font-size: 16px;
+  transition: 0.2s ease;
 }
 
 .boton-buscar:hover {
@@ -107,13 +116,15 @@ header {
 .header-acciones {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
 }
 
 .boton-icono {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0;
   text-decoration: none;
   line-height: 0;
   background: transparent;
@@ -147,7 +158,7 @@ footer {
 }
 
 .contenedor-footer {
-  max-width: 1400px;
+  max-width: 1140px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -192,14 +203,17 @@ footer {
 /* =========================================================
    PÁGINA TIENDA
 ========================================================= */
+/* ===== Sección principal ===== */
 .seccion-tienda {
-  background: rgb(177, 176, 176);
+  background: #909090;
 }
 
+/* ===== Encabezado ===== */
 .encabezado-tienda {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 0;
   gap: 20px;
   padding: 30px 0;
   background: #0E0E0F;
@@ -211,14 +225,15 @@ footer {
 }
 
 .titulo-tienda {
-  color: rgb(177, 176, 176);
+  color: #fff;
   text-align: center;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 80px;
   font-weight: 700;
   margin: 0;
 }
 
+/* Títulos compartidos */
 .encabezado-tienda,
 .titulo-seccion-tienda {
   background: #0E0E0F;
@@ -228,6 +243,7 @@ footer {
   text-align: center;
 }
 
+/* ===== Bloque tienda ===== */
 .bloque-tienda {
   background: #0E0E0F;
   padding-bottom: 10px;
@@ -251,8 +267,8 @@ footer {
 }
 
 .carousel-tienda .carousel-item img {
-  height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -284,11 +300,11 @@ footer {
   display: flex;
   align-items: start;
   flex-direction: column;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.35);
   padding: 16px;
   border-radius: 12px;
   margin-top: 50px;
-  justify-content: center;
   height: 380px;
 }
 
@@ -473,13 +489,18 @@ main.py-5 {
   background: #fff;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 10px 15px rgb(101, 101, 101);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
 }
 
 .btn-enviar {
-  background: #6C6CE7;
-  border: 1px solid #4f46e5;
+  background-color: #6C6CE7;
   color: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #4f46e5;
 }
 
 .btn-enviar:hover {
@@ -498,16 +519,17 @@ main.py-5 {
 
 .encabezado-historia {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 0;
   gap: 20px;
   padding-top: 55px;
 }
 
 .titulo-historia {
-  color: rgb(177, 176, 176);
+  color: #fff;
   text-align: center;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 80px;
   font-weight: 700;
   margin: 0;
@@ -528,7 +550,7 @@ main.py-5 {
 }
 
 .seccion-historia p {
-  color: rgb(177, 176, 176);
+  color: #fff;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -541,7 +563,7 @@ main.py-5 {
   background: #1f232a !important;
   border: 0 !important;
   border-radius: 12px !important;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3490196078) !important;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35) !important;
 }
 
 .seccion-historia .card.historia-card .card-body {
@@ -557,7 +579,7 @@ main.py-5 {
 }
 
 .seccion-historia .card.historia-card .card-text.historia-card-texto {
-  color: rgb(177, 176, 176) !important;
+  color: #fff !important;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -584,7 +606,7 @@ main.py-5 {
   text-decoration: none;
   text-align: center;
   box-shadow: 0 5px 15px rgba(79, 70, 229, 0.35);
-  transition: 0.2s ease-in-out;
+  transition: 0.2s ease;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -617,11 +639,11 @@ main.py-5 {
   justify-content: center;
   gap: 50px 90px;
   padding: 30px 20px 40px;
-  background: rgb(177, 176, 176);
+  background: #fff;
 }
 
 .seccion-tienda .contenedor-tarjetas {
-  background: rgb(177, 176, 176);
+  background: #909090;
 }
 
 /* Tarjeta base */
@@ -634,7 +656,7 @@ main.py-5 {
   position: relative;
   overflow: visible;
   border-radius: 10px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3490196078);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
 }
 
 /* Fondos individuales */
@@ -692,10 +714,10 @@ main.py-5 {
 
 /* Encabezado */
 .tarjeta-encabezado {
-  padding: 12px 8px 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 12px 8px 0;
   position: relative;
   z-index: 20;
 }
@@ -743,10 +765,11 @@ main.py-5 {
 
 /* Pie */
 .tarjeta-pie {
-  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-direction: column;
   margin-top: 105px;
   padding-bottom: 20px;
   z-index: 20;
