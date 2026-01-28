@@ -172,6 +172,30 @@ footer {
 /* =========================================================
    PÁGINA INICIO
 ========================================================= */
+/* HERO INICIO */
+.titulo-hero {
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #6C6CE7;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: #0E0E0F;
+  padding: 40px 0 10px 0;
+  margin: 0;
+}
+
+.subtitulo-hero {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(155.4827586207, 155.4827586207, 162.1172413793);
+  text-align: center;
+  background-color: #0E0E0F;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
 /* CAROUSEL INICIO */
 .carousel-item {
   height: 600px;
@@ -793,8 +817,8 @@ main.py-5 {
 */
 @media (max-width: 600px) {
   /* =========================
-     HEADER — MOBILE
-  ========================== */
+        HEADER — MOBILE 
+   ========================== */
   .contenedor-header {
     flex-wrap: wrap;
     padding: 10px 14px;
@@ -828,36 +852,42 @@ main.py-5 {
     height: 240px;
   }
   /* =========================
-     TARJETAS — MOBILE (2 columnas como antes)
+     TARJETAS — MOBILE SCROLL 
   ========================== */
   .contenedor-tarjetas {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-    padding: 16px 12px 24px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    gap: 86px;
+    padding: 16px calc(50% - 140px) 20px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
   }
-  /* CLAVE: igual que tu CSS viejo */
-  .tarjeta-producto {
-    width: 100%;
-    height: auto; /* <-- esto elimina el bloque gris */
-    max-width: none;
+  .contenedor-tarjetas > .tarjeta-producto {
+    flex: 0 0 280px;
+    width: 280px;
+    height: 390px;
     margin: 0;
-    background-size: 110% auto;
-    background-position: top;
-    background-repeat: no-repeat;
+    scroll-snap-align: center;
   }
-  .producto {
-    width: clamp(170px, 44vw, 240px);
+  .contenedor-tarjetas .link-tarjeta {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .contenedor-tarjetas .producto {
+    width: 320px;
     left: 50%;
-    top: 35%;
+    top: 50%;
     transform: translate(-50%, -50%) rotate(-5deg);
   }
-  /* CLAVE: resetear el margen grande que en desktop empuja todo */
-  .tarjeta-pie {
-    margin-top: 0; /* <-- como en tu viejo */
-    padding: 12px 12px 14px;
-    align-self: end;
+  .contenedor-tarjetas .tarjeta-pie {
+    margin-top: 105px;
+    padding-bottom: 20px;
   }
-  .btn-anadir {
+  .contenedor-tarjetas .btn-anadir {
     font-size: 14px;
     padding: 10px 0;
     border-radius: 10px;
@@ -884,7 +914,7 @@ main.py-5 {
     padding: 0 16px 18px;
   }
   /* =========================
-     PRODUCTO — MOBILE
+  	PRODUCTO — MOBILE
   ========================== */
   .producto-layout {
     grid-template-columns: 1fr;
@@ -906,17 +936,32 @@ main.py-5 {
   .imagenes-miniatura img {
     width: min(110px, 28vw);
   }
-  /* RELACIONADOS EN PRODUCTO: 2 columnas fijo (Bootstrap override) */
-  .pagina-producto .bloque-tienda .row.g-4 > [class*=col-] {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
+  /* =========================
+  	PRODUCTOS RELACIONADOS — SCROLL
+  ========================== */
+  .pagina-producto .relacionados-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    gap: 86px;
+    padding: 0 calc(50% - 140px) 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
   }
-  /* Card dentro de producto: también auto, para que no deje “gris” */
+  .pagina-producto .relacionados-row > [class*=col-] {
+    flex: 0 0 280px;
+    max-width: 280px;
+    padding: 0;
+    scroll-snap-align: center;
+  }
   .pagina-producto .producto-relacionado-card.tarjeta-producto {
-    width: 100% !important;
-    max-width: none !important;
-    height: auto !important; /* <-- clave */
-    margin: 0 !important;
+    width: 280px;
+    height: 390px;
+    margin: 0;
   }
   /* =========================
      FOOTER — MOBILE

@@ -2,6 +2,32 @@
    PÁGINA INICIO
 ========================================================= */
 @use "../utilities/variables" as *;
+@use "sass:color"; // habilita color.adjust y color.scale
+
+
+/* HERO INICIO */
+.titulo-hero {
+  font-family: $font-titulo;
+  font-size: 42px;
+  font-weight: 700;
+  color: $violeta-primario;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: $negro-principal; 
+  padding: 40px 0 10px 0;             
+  margin: 0;                         
+}
+
+.subtitulo-hero {
+  font-family: $font-texto;
+  font-size: 16px;
+  font-weight: 400;
+  color: color.scale($negro-principal, $lightness: 60%);
+  text-align: center;
+  background-color: $negro-principal; 
+  padding-bottom: 40px;               
+  margin: 0;
+}
 
 
 /* CAROUSEL INICIO */

@@ -6,88 +6,106 @@
 
 
   @include media-600 {
-  /* =========================
-     HEADER — MOBILE
-  ========================== */
-  .contenedor-header {
-    flex-wrap: wrap;
-    padding: 10px 14px;
-    gap: 0px 18px;
-  }
+/* =========================
+      HEADER — MOBILE 
+ ========================== */
+ .contenedor-header { 
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  gap: 0px 18px; 
+}
 
-  .contenedor-busqueda {
-    order: 4;
-    margin-top: 8px;
-  }
+.contenedor-busqueda {
+  order: 4;
+  margin-top: 8px;
+}
 
-  .header-acciones .boton-icono-iniciar {
-    display: inline-flex;
+.header-acciones .boton-icono-iniciar {
+  display: inline-flex;
   }
 
   .boton-login {
-    display: none;
+    display: none; 
   }
 
-  .icono {
-    width: 50px;
-    height: 45px;
+  .icono { 
+    width: 50px; 
+    height: 45px; 
   }
 
-  .boton-icono {
-    padding: 0;
-    margin: 0;
+  .boton-icono { 
+    padding: 0; 
+    margin: 0; 
   }
 
-  .boton-buscar {
-    right: 5px;
+
+  .boton-buscar { 
+    right: 5px; 
   }
 
+  
   /* =========================
      CAROUSEL — MOBILE
   ========================== */
   .carousel-item {
     height: 240px;
   }
+/* =========================
+   TARJETAS — MOBILE SCROLL 
+========================== */
+.contenedor-tarjetas {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
 
-  /* =========================
-     TARJETAS — MOBILE (2 columnas como antes)
-  ========================== */
-  .contenedor-tarjetas {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-    padding: 16px 12px 24px;
-  }
+  justify-content: flex-start;
 
-  /* CLAVE: igual que tu CSS viejo */
-  .tarjeta-producto {
-    width: 100%;
-    height: auto;            /* <-- esto elimina el bloque gris */
-    max-width: none;
-    margin: 0;
-    background-size: 110% auto;
-    background-position: top;
-    background-repeat: no-repeat;
-  }
+  gap: 86px;
 
-  .producto {
-    width: clamp(170px, 44vw, 240px);
-    left: 50%;
-    top: 35%;
-    transform: translate(-50%, -50%) rotate(-5deg);
-  }
+ 
+  padding: 16px calc(50% - 140px) 20px;
 
-  /* CLAVE: resetear el margen grande que en desktop empuja todo */
-  .tarjeta-pie {
-    margin-top: 0;           /* <-- como en tu viejo */
-    padding: 12px 12px 14px;
-    align-self: end;
-  }
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
 
-  .btn-anadir {
-    font-size: 14px;
-    padding: 10px 0;
-    border-radius: 10px;
-  }
+
+.contenedor-tarjetas > .tarjeta-producto {
+  flex: 0 0 280px;
+  width: 280px;
+  height: 390px;
+  margin: 0;
+
+  scroll-snap-align: center; 
+}
+
+.contenedor-tarjetas .link-tarjeta {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.contenedor-tarjetas .producto {
+  width: 320px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+}
+
+.contenedor-tarjetas .tarjeta-pie {
+  margin-top: 105px;
+  padding-bottom: 20px;
+}
+
+.contenedor-tarjetas .btn-anadir {
+  font-size: 14px;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+
 
   /* =========================
      NUESTRA HISTORIA — MOBILE
@@ -114,47 +132,71 @@
     padding: 0 16px 18px;
   }
 
-  /* =========================
-     PRODUCTO — MOBILE
-  ========================== */
-  .producto-layout {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 0 14px;
-  }
 
-  .producto-info {
-    margin-top: 0;
-    height: auto;
-  }
+	/* =========================
+		PRODUCTO — MOBILE
+	========================== */
+	.producto-layout {
+		grid-template-columns: 1fr;
+		gap: 18px;
+		padding: 0 14px;
+	}
 
-  .producto-imagen img {
-    max-width: 320px;
-  }
+	.producto-info {
+		margin-top: 0;
+		height: auto;
+	}
 
-  .imagenes-miniatura {
-    justify-content: center;
-    padding: 0 10px;
-    margin: 10px 0 0;
-  }
+	.producto-imagen img {
+		max-width: 320px;
+	}
 
-  .imagenes-miniatura img {
-    width: min(110px, 28vw);
-  }
+	.imagenes-miniatura {
+		justify-content: center;
+		padding: 0 10px;
+		margin: 10px 0 0;
+	}
 
-  /* RELACIONADOS EN PRODUCTO: 2 columnas fijo (Bootstrap override) */
-  .pagina-producto .bloque-tienda .row.g-4 > [class*="col-"] {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
-  }
+	.imagenes-miniatura img {
+		width: min(110px, 28vw);
+	}
 
-  /* Card dentro de producto: también auto, para que no deje “gris” */
-  .pagina-producto .producto-relacionado-card.tarjeta-producto {
-    width: 100% !important;
-    max-width: none !important;
-    height: auto !important;      /* <-- clave */
-    margin: 0 !important;
-  }
+	/* =========================
+		PRODUCTOS RELACIONADOS — SCROLL
+	========================== */
+	.pagina-producto .relacionados-row {
+		display: flex;
+		flex-wrap: nowrap;
+
+		overflow-x: auto;
+		overflow-y: hidden;
+
+		justify-content: flex-start;
+
+		gap: 86px;
+		padding: 0 calc(50% - 140px) 20px;
+
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+
+		--bs-gutter-x: 0;
+		--bs-gutter-y: 0;
+	}
+
+	.pagina-producto .relacionados-row > [class*="col-"] {
+		flex: 0 0 280px;
+		max-width: 280px;
+		padding: 0;
+
+		scroll-snap-align: center;
+	}
+
+	.pagina-producto .producto-relacionado-card.tarjeta-producto {
+		width: 280px;
+		height: 390px;
+		margin: 0;
+	}
+
 
   /* =========================
      FOOTER — MOBILE
