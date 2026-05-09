@@ -1,0 +1,117 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+/* Contenedor de tarjetas */
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 280px));
+  justify-content: center;
+  gap: 50px 90px;
+  padding: 30px 20px 40px;
+  background: $color-fondo-paginas;
+}
+
+.seccion-tienda .contenedor-tarjetas {
+  background: $color-fondo-paginas;
+}
+
+/* Tarjeta base */
+.tarjeta-producto {
+  width: 280px;
+  height: 390px;
+  background-size: 110% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: visible;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* Fondos individuales */
+.fondo-1  { background-image: url("../imagenes/fondo tarjeta.png") !important; }
+.fondo-2  { background-image: url("../imagenes/fondo tarjeta2.png") !important; }
+.fondo-3  { background-image: url("../imagenes/fondo tarjeta3.png") !important; }
+.fondo-4  { background-image: url("../imagenes/fondo tarjeta4.png") !important; }
+.fondo-5  { background-image: url("../imagenes/fondo tarjeta5.png") !important; }
+.fondo-6  { background-image: url("../imagenes/fondo tarjeta6.png") !important; }
+.fondo-7  { background-image: url("../imagenes/fondo tarjeta7.png") !important; }
+.fondo-8  { background-image: url("../imagenes/fondo tarjeta8.png") !important; }
+.fondo-9  { background-image: url("../imagenes/fondo tarjeta9.png") !important; }
+.fondo-10 { background-image: url("../imagenes/fondo tarjeta10.png") !important; }
+.fondo-11 { background-image: url("../imagenes/fondo tarjeta11.png") !important; }
+.fondo-12 { background-image: url("../imagenes/fondo tarjeta12.png") !important; }
+.fondo-13 { background-image: url("../imagenes/fondo tarjeta13.png") !important; }
+
+/* Encabezado */
+.tarjeta-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 8px 0;
+  position: relative;
+  z-index: 20;
+}
+
+.precio-tarjeta {
+  background: $negro-principal;
+  color: $violeta-primario;
+  padding: 3px 14px;
+  border-radius: 5px;
+  font-family: $font-precio;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.logo-tarjeta {
+  margin-left: auto;
+}
+
+.logo-tarjeta img {
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Cuerpo */
+.tarjeta-cuerpo {
+  position: relative;
+  height: 180px;
+}
+
+.producto {
+  position: absolute;
+  width: 350px;
+  left: 47%;
+  top: 52%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.6));
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-producto:hover .producto {
+  transform: translate(-50%, -50%) rotate(-5deg) scale(1.08);
+}
+
+/* Pie */
+.tarjeta-pie {
+  @include flex-center;
+  flex-direction: column;
+  margin-top: 105px;
+  padding-bottom: 20px;
+  z-index: 20;
+}
+
+.pie-interno {
+  width: 85%;
+  max-width: 220px;
+  text-align: center;
+}
+
+/* Enlace */
+.link-tarjeta {
+  display: contents;
+  text-decoration: none;
+  color: inherit;
+}

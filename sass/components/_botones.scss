@@ -1,0 +1,38 @@
+@use "../utilities/variables" as *;
+
+
+.btn-anadir {
+  display: block;
+  width: 100%;
+  padding: 7px 0;
+  background: $violeta-primario;
+  color: $blanco !important;
+  border-radius: $radio-sm;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: $sombra-violeta;
+  transition: $transition-fast;
+  font-family: $font-titulo;
+  font-weight: 700;
+  font-size: 18px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-anadir:hover {
+  background: $violeta-hover;
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.45);
+}
+
+.btn-anadir:focus,
+.btn-anadir:focus-visible {
+  background: $violeta-hover !important;
+  color: $blanco !important;
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.25) !important;
+}
+
+.btn-anadir:active {
+  background: $violeta-oscuro !important;
+  transform: translateY(0);
+}

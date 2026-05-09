@@ -1,0 +1,19 @@
+@use "utilities/variables" as *;
+@use "utilities/mixins" as *;
+
+@use "base/reset";
+@use "base/generales";
+
+@use "layout/header";
+@use "layout/footer";
+
+@use "layout/main-index";
+@use "layout/main-tienda";
+@use "layout/main-producto";
+@use "layout/main-info-contacto";
+@use "layout/main.historia";
+
+@use "components/botones";
+@use "components/tarjetas";
+
+@use "layout/media-600";

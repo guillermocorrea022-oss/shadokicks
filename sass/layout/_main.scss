@@ -1,0 +1,17 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+@use "..base/reset";
+@use "..base/generales";
+
+@use "..layout/header";
+@use "..layout/footer";
+
+@use "..components/botones";
+@use "..components/tarjetas";
+
+@use "..pages/main";
+@use "..pages/tienda";
+@use "..pages/producto";
+@use "..pages/contacto";
+@use "..pages/historia";

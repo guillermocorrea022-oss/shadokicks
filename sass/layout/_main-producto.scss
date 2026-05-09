@@ -1,0 +1,168 @@
+/* =========================================================
+   PÁGINA PRODUCTO
+========================================================= */
+@use "../utilities/variables" as *;
+
+
+.pagina-producto {
+  background: $gris-claro;
+}
+
+.producto-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.producto-imagen img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.producto-info {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 16px;
+  border-radius: $radio-lg;
+  margin-top: 50px;
+  height: 380px;
+}
+
+.titulo-producto {
+  margin-top: 0;
+}
+
+.precio-producto {
+  display: inline-block;
+  font-family: $font-precio;
+  font-size: 26px;
+  color: $violeta-primario;
+  padding: 6px 12px;
+  border-radius: $radio-md;
+  background: $violeta-bg-soft;
+  border: 1px solid $violeta-border-soft;
+}
+
+.producto-info p {
+  margin-bottom: 30px;
+}
+
+.pagina-producto .talle-btn {
+  border-color: rgba(79, 70, 229, 0.55) !important;
+  color: $violeta-oscuro !important;
+  background: transparent !important;
+}
+
+.pagina-producto .talle-btn:hover,
+.pagina-producto .talle-btn:focus,
+.pagina-producto .talle-btn:active,
+.pagina-producto .talle-btn.active {
+  background: $violeta-bg-soft !important;
+  border-color: rgba(79, 70, 229, 0.75) !important;
+  color: $violeta-oscuro !important;
+}
+
+.imagenes-miniatura {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.imagenes-miniatura img {
+  width: 150px;
+  height: auto;
+  box-shadow: 5px 5px 25px 0 rgb(128, 128, 128);
+  transition: transform $transition-fast;
+}
+
+.imagenes-miniatura img:hover {
+  transform: scale(1.10);
+}
+
+.titulo-seccion-producto {
+  background: $negro-principal;
+  color: $violeta-primario;
+  font-family: $font-titulo;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.pagina-producto .bloque-tienda {
+  background: $negro-principal;
+  padding-bottom: 10px;
+}
+
+.pagina-producto .contenedor-tarjetas {
+  background: transparent;
+}
+
+.pagina-producto .link-tarjeta {
+  display: block;
+}
+
+/* PRODUCTO - tarjetas relacionadas (compatible con Bootstrap) */
+.pagina-producto .producto-relacionado-card.tarjeta-producto {
+  width: 100%;
+  max-width: 280px;
+  height: 400px;
+  margin: 0 auto;
+
+  /* por si Bootstrap mete algo raro */
+  border: 0 !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* Asegura que el fondo se vea en las cards del producto */
+.pagina-producto .producto-relacionado-card.tarjeta-producto {
+  background-repeat: no-repeat !important;
+  background-position: top !important;
+  background-size: 110% auto !important;
+}
+
+/* Fondos dentro de producto.html (1 a 13) */
+.pagina-producto .producto-relacionado-card.fondo-1  { background-image: url("../imagenes/fondo tarjeta.png") !important; }
+.pagina-producto .producto-relacionado-card.fondo-2  { background-image: url("../imagenes/fondo tarjeta2.png") !important; }
+.pagina-producto .producto-relacionado-card.fondo-3  { background-image: url("../imagenes/fondo tarjeta3.png") !important; }
+.pagina-producto .producto-relacionado-card.fondo-4  { background-image: url("../imagenes/fondo tarjeta4.png") !important; }
+.pagina-producto .producto-relacionado-card.fondo-5  { background-image: url("../imagenes/fondo tarjeta5.png") !important; }
+.pagina-producto .producto-relacionado-card.fondo-6  { background-image: url("../imagenes/fondo tarjeta6.png") !important; }
+.pagina-producto .producto-relacionado-card.fondo-7  { background-image: url("../imagenes/fondo tarjeta7.png") !important; }
+.pagina-producto .producto-relacionado-card.fondo-8  { background-image: url("../imagenes/fondo tarjeta8.png") !important; }
+.pagina-producto .producto-relacionado-card.fondo-9  { background-image: url("../imagenes/fondo tarjeta9.png") !important; }
+.pagina-producto .producto-relacionado-card.fondo-10 { background-image: url("../imagenes/fondo tarjeta10.png") !important; }
+.pagina-producto .producto-relacionado-card.fondo-11 { background-image: url("../imagenes/fondo tarjeta11.png") !important; }
+.pagina-producto .producto-relacionado-card.fondo-12 { background-image: url("../imagenes/fondo tarjeta12.png") !important; }
+.pagina-producto .producto-relacionado-card.fondo-13 { background-image: url("../imagenes/fondo tarjeta13.png") !important; }
+
+/* Fix color botón "Añadir al carrito" en producto y relacionados */
+.pagina-producto {
+  .btn-anadir {
+    background: $violeta-primario !important;
+    border-color: $violeta-primario !important;
+    color: $blanco !important;
+
+    &:hover {
+      background: $violeta-hover !important;
+      border-color: $violeta-hover !important;
+    }
+
+    &:focus,
+    &:focus-visible {
+      background: $violeta-hover !important;
+      box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.25) !important;
+    }
+  }
+}

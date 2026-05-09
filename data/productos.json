@@ -1,0 +1,145 @@
+[
+	{
+		"id": 1,
+		"nombre": "Jordan 1 The-Spider-Verse",
+		"precio": 490,
+		"imagen": "imagenes/zapatilla1.png",
+		"fondo": "fondo-1",
+		"categoria": "destacados",
+		"descripcion": "Inspiradas en el universo de Spider-Man: Across the Spider-Verse, combinan diseño icónico con detalles gráficos únicos.",
+		"talles": [38, 39, 40, 41, 42],
+		"stock": 8
+	},
+	{
+		"id": 2,
+		"nombre": "Air Max Urban Shadow",
+		"precio": 520,
+		"imagen": "imagenes/zapatilla2.png",
+		"fondo": "fondo-2",
+		"categoria": "destacados",
+		"descripcion": "Modelo urbano exclusivo de edición limitada, con líneas modernas y materiales premium.",
+		"talles": [38, 39, 40, 41, 42, 43],
+		"stock": 5
+	},
+	{
+		"id": 3,
+		"nombre": "Shadow Premium Black",
+		"precio": 560,
+		"imagen": "imagenes/zapatilla3.png",
+		"fondo": "fondo-3",
+		"categoria": "destacados",
+		"descripcion": "Edición premium en color negro con materiales de alta calidad y suela reforzada.",
+		"talles": [39, 40, 41, 42],
+		"stock": 4
+	},
+	{
+		"id": 4,
+		"nombre": "Shadow Limited Edition",
+		"precio": 610,
+		"imagen": "imagenes/zapatilla4.png",
+		"fondo": "fondo-4",
+		"categoria": "destacados",
+		"descripcion": "Colección exclusiva de la edición limitada Shadokicks.",
+		"talles": [38, 39, 40, 41, 42, 43, 44],
+		"stock": 6
+	},
+	{
+		"id": 5,
+		"nombre": "Shadow Drop V",
+		"precio": 640,
+		"imagen": "imagenes/zapatilla5.png",
+		"fondo": "fondo-5",
+		"categoria": "shadow",
+		"descripcion": "Drop número 5 de la colección Shadow, ediciones únicas y numeradas.",
+		"talles": [39, 40, 41, 42, 43],
+		"stock": 3
+	},
+	{
+		"id": 6,
+		"nombre": "Shadow Drop VI",
+		"precio": 690,
+		"imagen": "imagenes/zapatilla6.png",
+		"fondo": "fondo-6",
+		"categoria": "shadow",
+		"descripcion": "Diseño urbano exclusivo con detalles bordados y suela premium.",
+		"talles": [38, 39, 40, 41, 42],
+		"stock": 4
+	},
+	{
+		"id": 7,
+		"nombre": "Shadow Drop VII",
+		"precio": 740,
+		"imagen": "imagenes/zapatilla7.png",
+		"fondo": "fondo-7",
+		"categoria": "shadow",
+		"descripcion": "Materiales premium y costuras reforzadas en una edición numerada.",
+		"talles": [40, 41, 42, 43, 44],
+		"stock": 2
+	},
+	{
+		"id": 8,
+		"nombre": "Shadow Drop VIII",
+		"precio": 790,
+		"imagen": "imagenes/zapatilla8.png",
+		"fondo": "fondo-8",
+		"categoria": "shadow",
+		"descripcion": "Última colección de la serie Shadow Drop, edición exclusiva.",
+		"talles": [38, 39, 40, 41, 42, 43],
+		"stock": 5
+	},
+	{
+		"id": 9,
+		"nombre": "Shadow Pro IX",
+		"precio": 820,
+		"imagen": "imagenes/zapatilla9.png",
+		"fondo": "fondo-9",
+		"categoria": "todos",
+		"descripcion": "Modelo Pro IX con diseño urbano y detalles laser-cut.",
+		"talles": [39, 40, 41, 42],
+		"stock": 3
+	},
+	{
+		"id": 10,
+		"nombre": "Shadow Pro X",
+		"precio": 860,
+		"imagen": "imagenes/zapatilla10.png",
+		"fondo": "fondo-10",
+		"categoria": "todos",
+		"descripcion": "Materiales premium y acabado en relieve, edición coleccionable.",
+		"talles": [40, 41, 42, 43, 44],
+		"stock": 2
+	},
+	{
+		"id": 11,
+		"nombre": "Shadow Pro XI",
+		"precio": 910,
+		"imagen": "imagenes/zapatilla11.png",
+		"fondo": "fondo-11",
+		"categoria": "todos",
+		"descripcion": "Edición XI de la línea Pro con aplicaciones metálicas.",
+		"talles": [38, 39, 40, 41, 42],
+		"stock": 4
+	},
+	{
+		"id": 12,
+		"nombre": "Shadow Pro XII",
+		"precio": 960,
+		"imagen": "imagenes/zapatilla12.png",
+		"fondo": "fondo-12",
+		"categoria": "todos",
+		"descripcion": "Línea Pro XII, materiales premium con detalles dorados.",
+		"talles": [39, 40, 41, 42, 43],
+		"stock": 3
+	},
+	{
+		"id": 13,
+		"nombre": "Shadow Master XIII",
+		"precio": 1020,
+		"imagen": "imagenes/zapatilla13.png",
+		"fondo": "fondo-13",
+		"categoria": "todos",
+		"descripcion": "La pieza más exclusiva de la colección, edición numerada Master XIII.",
+		"talles": [40, 41, 42, 43],
+		"stock": 1
+	}
+]

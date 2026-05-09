@@ -1,0 +1,237 @@
+/* =========================================================
+   HEADER — RESPONSIVE MOBILE
+*/
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+
+  @include media-600 {
+/* =========================
+      HEADER — MOBILE 
+ ========================== */
+ .contenedor-header { 
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  gap: 0px 18px; 
+}
+
+.contenedor-busqueda {
+  order: 4;
+  margin-top: 8px;
+}
+
+.header-acciones .boton-icono-iniciar {
+  display: inline-flex;
+  }
+
+  .boton-login {
+    display: none; 
+  }
+
+  .icono { 
+    width: 50px; 
+    height: 45px; 
+  }
+
+  .boton-icono { 
+    padding: 0; 
+    margin: 0; 
+  }
+
+
+  .boton-buscar { 
+    right: 5px; 
+  }
+
+  
+  /* =========================
+     CAROUSEL — MOBILE
+  ========================== */
+  .carousel-item {
+    height: 240px;
+  }
+/* =========================
+   TARJETAS — MOBILE SCROLL 
+========================== */
+.contenedor-tarjetas {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  justify-content: flex-start;
+
+  gap: 86px;
+
+ 
+  padding: 16px calc(50% - 140px) 20px;
+
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+
+.contenedor-tarjetas > .tarjeta-producto {
+  flex: 0 0 280px;
+  width: 280px;
+  height: 390px;
+  margin: 0;
+
+  scroll-snap-align: center; 
+}
+
+.contenedor-tarjetas .link-tarjeta {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.contenedor-tarjetas .producto {
+  width: 320px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+}
+
+.contenedor-tarjetas .tarjeta-pie {
+  margin-top: 105px;
+  padding-bottom: 20px;
+}
+
+.contenedor-tarjetas .btn-anadir {
+  font-size: 14px;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+
+
+  /* =========================
+     NUESTRA HISTORIA — MOBILE
+  ========================== */
+  .encabezado-historia {
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 30px;
+  }
+
+  .titulo-historia {
+    font-size: 54px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .logo-historia {
+    width: 170px;
+    max-width: 70%;
+    height: auto;
+  }
+
+  .seccion-historia p {
+    padding: 0 16px 18px;
+  }
+
+
+	/* =========================
+		PRODUCTO — MOBILE
+	========================== */
+	.producto-layout {
+		grid-template-columns: 1fr;
+		gap: 18px;
+		padding: 0 14px;
+	}
+
+	.producto-info {
+		margin-top: 0;
+		height: auto;
+	}
+
+	.producto-imagen img {
+		max-width: 320px;
+	}
+
+	.imagenes-miniatura {
+		justify-content: center;
+		padding: 0 10px;
+		margin: 10px 0 0;
+	}
+
+	.imagenes-miniatura img {
+		width: min(110px, 28vw);
+	}
+
+	/* =========================
+		PRODUCTOS RELACIONADOS — SCROLL
+	========================== */
+	.pagina-producto .relacionados-row {
+		display: flex;
+		flex-wrap: nowrap;
+
+		overflow-x: auto;
+		overflow-y: hidden;
+
+		justify-content: flex-start;
+
+		gap: 86px;
+		padding: 0 calc(50% - 140px) 20px;
+
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+
+		--bs-gutter-x: 0;
+		--bs-gutter-y: 0;
+	}
+
+	.pagina-producto .relacionados-row > [class*="col-"] {
+		flex: 0 0 280px;
+		max-width: 280px;
+		padding: 0;
+
+		scroll-snap-align: center;
+	}
+
+	.pagina-producto .producto-relacionado-card.tarjeta-producto {
+		width: 280px;
+		height: 390px;
+		margin: 0;
+	}
+
+
+  /* =========================
+     FOOTER — MOBILE
+  ========================== */
+  .contenedor-footer {
+    align-items: center;
+  }
+
+  .contenedor-footer .boton-enlace {
+    max-width: 320px;
+    justify-content: center;
+    padding: 8px 16px;
+    font-size: 16px;
+    margin: 0px 10px 0px 10px;
+  }
+
+  .contenedor-footer .logo-sitio {
+    height: 48px;
+    max-width: 160px;
+  }
+
+  /* =========================
+     TIENDA — TITULO MOBILE
+  ========================== */
+  .titulo-tienda {
+    font-size: 54px;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* CONTACTO — FORM MOBILE */
+  .col-12.col-md-8.col-lg-6 {
+    max-width: 93%;
+  }
+
+  
+}

@@ -1,0 +1,37 @@
+/* =========================================================
+   PÁGINA CONTACTANOS
+========================================================= */
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+main.py-5 {
+  padding-top: 15px !important;
+  background: $color-fondo-paginas; 
+}
+
+#contactanos {
+  font-size: 32px;
+  padding: 3px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.col-12.col-md-8.col-lg-6 {
+  background: $blanco;
+  padding: 30px;
+  border-radius: $radio-lg;
+  box-shadow: $sombra-suave;
+}
+
+.btn-enviar {
+  @include boton-base($violeta-primario, $blanco);
+  border: 1px solid $violeta-oscuro;
+}
+
+.btn-enviar:hover {
+  background: $violeta-hover;
+  border-color: $violeta-hover;
+  color: $blanco;
+}
+
+
