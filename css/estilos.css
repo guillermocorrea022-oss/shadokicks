@@ -1170,4 +1170,35 @@ main.py-5 {
 	}
 }
 
+/* =========================================================
+   LOGIN / REGISTRO
+========================================================= */
+.boton-login.usuario-logueado {
+	border-color: #22c55e;
+	color: #fff;
+	background: rgba(34, 197, 94, 0.18);
+}
+
+.boton-login.usuario-logueado:hover {
+	background: rgba(34, 197, 94, 0.3);
+	border-color: #22c55e;
+}
+
+.swal-link-cambio {
+	margin: 14px 0 0;
+	font-size: 13px;
+	text-align: center;
+	color: #555;
+}
+
+.swal-link-cambio a {
+	color: #4f46e5;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.swal-link-cambio a:hover {
+	text-decoration: underline;
+}
+
 /*# sourceMappingURL=estilos.css.map */

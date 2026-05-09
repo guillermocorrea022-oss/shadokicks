@@ -210,11 +210,16 @@ function renderCarrito() {
 async function finalizarCompra() {
 	if (carrito.length === 0) return;
 
+	// Si hay un usuario logueado precargo nombre y email
+	const u = typeof usuarioActivo === "function" ? usuarioActivo() : null;
+	const nombrePre = u ? u.nombre : "";
+	const emailPre = u ? u.email : "";
+
 	const { value: datos } = await Swal.fire({
 		title: "Finalizar compra",
 		html: `
-			<input id="swal-nombre" class="swal2-input" placeholder="Nombre completo">
-			<input id="swal-email" class="swal2-input" placeholder="Email" type="email">
+			<input id="swal-nombre" class="swal2-input" placeholder="Nombre completo" value="${nombrePre}">
+			<input id="swal-email" class="swal2-input" placeholder="Email" type="email" value="${emailPre}">
 			<input id="swal-direccion" class="swal2-input" placeholder="Dirección de envío">
 		`,
 		focusConfirm: false,
@@ -376,6 +381,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 	renderCarrito();
 	inicializarBuscador();
 	inicializarEventosCarrito();
+
+	if (typeof inicializarAuth === "function") {
+		inicializarAuth();
+	}
 
 	// Disparo el init especifico de la pagina si existe
 	if (typeof iniciarPagina === "function") {
